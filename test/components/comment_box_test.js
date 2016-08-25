@@ -19,4 +19,18 @@ describe ("CommentBox Testing", ()=>{
 		expect(component.find("button")).to.exist;
 	});
 
+	describe("entering text area ", ()=>{
+		beforeEach(()=>{
+			component.find("textarea").simulate("change", "new comment");
+		});
+		it ("has a text value", ()=>{
+			expect(component.find("textarea")).to.have.value("new comment");
+		});
+
+		it ("clears text value on submit", ()=>{
+			component.find("form").simulate("submit");
+			expect(component.find("textarea")).to.have.value("");
+		});
+	});
+
 });
