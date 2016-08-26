@@ -1,1 +1,1 @@
-Here i am writing BDD tests for React/Redux comment box app.
+Here I am writing BDD tests for React/Redux comment box app.
